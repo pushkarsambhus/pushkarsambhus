@@ -1,32 +1,71 @@
-# 👋 Hi, I’m Pushkar  
+# Engineering Productivity & AI Experiments
 
-I’m a **Principal Engineer** with 16+ years of experience in **enterprise platforms, AI/ML integration, and developer productivity**.  
+Hi, I'm Pushkar Sambhus — Principal Engineer with 16+ years in 
+enterprise platform engineering, CI/CD automation, and AI/ML 
+integration across large engineering organizations.
 
-I specialize in building **scalable frameworks, developer tools, and cloud-native systems** that improve reliability, accelerate delivery, and reduce manual effort across large engineering organizations.  
+This repository is a collection of prototypes and learning 
+projects exploring how AI can be applied to developer productivity 
+problems — the same class of problems I've spent my career 
+solving at scale at Workday.
 
----
-
-## 🔹 Featured Projects  
-
-### [Dev Productivity Agents](https://github.com/pushkarsambhus/dev-productivity-agents)  
-AI-assisted log triage and test suggestion system.  
-Impact: reduced manual triage by 80%, accelerated CI/CD feedback loops, and improved developer productivity.  
-
-### [Slack QA Assistant](https://github.com/pushkarsambhus/slack-qa-assistant)  
-Slack app + API that suggests test cases from PR diffs.  
-Impact: faster PR feedback, stronger QA alignment, and better developer–tester collaboration.  
-
-### [CI/CD AI Guardrails](https://github.com/pushkarsambhus/cicd-ai-guardrails)  
-CLI/API tool that flags secrets, dependency risks, and missing tests in pipelines.  
-Impact: reduced production risk, improved pipeline quality, and enforced best practices.  
+These are intentionally small-scale explorations, not production 
+systems. The production version of some of these ideas — 
+particularly the build failure detection work — lives inside 
+Workday's internal platform.
 
 ---
 
-## 🔹 What I’m Focused On  
-- **AI/ML for Developer Productivity** → intelligent agents, log triage, QA assistants.  
-- **Platform Engineering** → Kubernetes pipelines, distributed runners, CI/CD guardrails.  
-- **Scalable Frameworks** → enterprise-wide frameworks and validation systems adopted across global teams.  
+## Projects
+
+### Dev Productivity Agent
+A prototype exploring AI-assisted CI/CD log triage — given a 
+build failure log, uses an LLM to identify the failure pattern 
+and suggest a likely root cause.
+
+Inspired by a production system I built at Workday that reduced 
+build failure triage from 20+ minutes to near-immediate results 
+across 60+ engineering teams.
+
+**Stack:** Python · LangChain · OpenAI API
 
 ---
 
-💡 These projects reflect my passion for solving **real engineering challenges** through innovation, not just code — bridging technical strategy with business impact.  
+### Slack QA Assistant
+A prototype Slack integration that takes a PR diff as input and 
+suggests relevant test cases — exploring how LLMs can assist 
+the developer-tester feedback loop.
+
+**Stack:** Python · Slack API · OpenAI API
+
+---
+
+### CI/CD AI Guardrails
+A prototype CLI tool that analyzes pipeline configuration for 
+common quality gaps — missing tests, exposed secrets, dependency 
+risks — using LLM-assisted pattern detection.
+
+**Stack:** Python · GitHub Actions · OpenAI API
+
+---
+
+## What I'm Exploring
+
+- How automated failure detection patterns from CI/CD pipelines 
+  apply to evaluating AI system behavior
+- LLM evaluation infrastructure using LangSmith and DeepEval
+- Adversarial testing methodologies for AI quality systems
+
+---
+
+## Background
+
+Currently leading technical strategy for Workday's Workforce 
+pillar — supporting 260+ engineers globally across Time, Absence, 
+Compensation, Benefits, HR Core, Scheduling, and Compliance.
+
+The work here reflects where I'm headed next: the intersection 
+of platform engineering, AI quality systems, and adversarial 
+thinking about how AI systems fail.
+
+→ LinkedIn: linkedin.com/in/pushkarsambhus
