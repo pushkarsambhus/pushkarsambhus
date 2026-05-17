@@ -1,71 +1,57 @@
-# Engineering Productivity & AI Experiments
+# Pushkar Sambhus
 
-Hi, I'm Pushkar Sambhus — Principal Engineer with 16+ years in 
-enterprise platform engineering, CI/CD automation, and AI/ML 
-integration across large engineering organizations.
+Principal Engineer · 16+ years in enterprise platform engineering, CI/CD automation, and AI/ML integration across large engineering organizations.
 
-This repository is a collection of prototypes and learning 
-projects exploring how AI can be applied to developer productivity 
-problems — the same class of problems I've spent my career 
-solving at scale at Workday.
+This profile is a collection of prototypes and learning projects exploring how AI can reduce developer toil and improve software delivery — the same class of problems I've spent my career solving at scale.
 
-These are intentionally small-scale explorations, not production 
-systems. The production version of some of these ideas — 
-particularly the build failure detection work — lives inside 
-Workday's internal platform.
+These are intentionally small-scale explorations, not production systems.
 
 ---
 
 ## Projects
 
-### Dev Productivity Agent
-A prototype exploring AI-assisted CI/CD log triage — given a 
-build failure log, uses an LLM to identify the failure pattern 
-and suggest a likely root cause.
+### [ReAct Agent API](https://github.com/pushkarsambhus/react-agent-api)
+A FastAPI server that manually implements the **ReAct (Reasoning + Acting)** loop — Thought → Action → Observation — powered by Claude. Exposes a `POST /ask` endpoint that returns both the final answer and the full reasoning trace. Tools: calculator + DuckDuckGo web search.
 
-Inspired by a production system I built at Workday that reduced 
-build failure triage from 20+ minutes to near-immediate results 
-across 60+ engineering teams.
-
-**Stack:** Python · LangChain · OpenAI API
+`Python` `FastAPI` `Claude` `ReAct`
 
 ---
 
-### Slack QA Assistant
-A prototype Slack integration that takes a PR diff as input and 
-suggests relevant test cases — exploring how LLMs can assist 
-the developer-tester feedback loop.
+### [smolagents Research Agent](https://github.com/pushkarsambhus/smolagents-research-agent)
+A CLI research tool built on HuggingFace's **smolagents** library. A `CodeAgent` uses DuckDuckGo search and code execution to answer multi-step research questions from the terminal.
 
-**Stack:** Python · Slack API · OpenAI API
+`Python` `smolagents` `Claude` `DuckDuckGo`
 
 ---
 
-### CI/CD AI Guardrails
-A prototype CLI tool that analyzes pipeline configuration for 
-common quality gaps — missing tests, exposed secrets, dependency 
-risks — using LLM-assisted pattern detection.
+### [Dev Productivity Agents](https://github.com/pushkarsambhus/dev-productivity-agents)
+Lightweight agents that triage CI build logs and suggest tests from code diffs — heuristics-first with optional LLM enrichment. Inspired by a production system that reduced build failure triage from 20+ minutes to near-immediate results across 60+ teams.
 
-**Stack:** Python · GitHub Actions · OpenAI API
+`Python` `FastAPI` `OpenAI`
 
 ---
 
-## What I'm Exploring
+### [CI/CD AI Guardrails](https://github.com/pushkarsambhus/ci-cd-ai-guardrails)
+CLI + API tool that scans diffs and PRs for secrets, risky dependency changes, and missing tests. Plugs into GitHub Actions as a pre-merge safety check.
 
-- How automated failure detection patterns from CI/CD pipelines 
-  apply to evaluating AI system behavior
+`Python` `FastAPI` `GitHub Actions`
+
+---
+
+### [Slack QA Assistant](https://github.com/pushkarsambhus/slack-qa-assistant)
+A Slack app that suggests test cases for PRs and diffs via a `/suggest-tests` slash command. Embeds test planning into the team's existing Slack workflow.
+
+`Python` `Slack Bolt` `FastAPI` `OpenAI`
+
+---
+
+## What I'm exploring
+
+- Manual implementation of agent patterns (ReAct, tool use, reasoning loops)
 - LLM evaluation infrastructure using LangSmith and DeepEval
+- How automated failure detection from CI/CD applies to evaluating AI system behavior
 - Adversarial testing methodologies for AI quality systems
 
 ---
 
-## Background
-
-Currently leading technical strategy for Workday's Workforce 
-pillar — supporting 260+ engineers globally across Time, Absence, 
-Compensation, Benefits, HR Core, Scheduling, and Compliance.
-
-The work here reflects where I'm headed next: the intersection 
-of platform engineering, AI quality systems, and adversarial 
-thinking about how AI systems fail.
-
-→ LinkedIn: linkedin.com/in/pushkarsambhus
+→ [linkedin.com/in/pushkarsambhus](https://linkedin.com/in/pushkarsambhus)
